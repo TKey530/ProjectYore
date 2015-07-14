@@ -35,12 +35,18 @@ namespace MainMenu
             exitText.enabled = true;
         }
 
-        public void StartLevel()
+        public void StartNewGame()
         {
             Debug.Log("Start level");
             Application.LoadLevel(1);
+//            Debug.Log(GameController.UI.showPauseMenu.ToString());
         }
 
+        public void LoadSavedGame()
+        {
+            Debug.Log("Loading a saved game");
+            GameController.control.Load();
+        }
         public void ExitGame()
         {
             Debug.Log("Exit game");
